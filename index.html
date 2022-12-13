@@ -32,11 +32,12 @@
     .topnav {
       position: relative;
       overflow: hidden;
+      text-align: center;
       background-color: rgba(0,51,82,.5);
     }
 
     .topnav a {
-      display: block;
+      display: inline-block;
       color: white;
       text-align: center;
       font-family: sans-serif;
@@ -45,12 +46,8 @@
       text-decoration: none;
     }
 
-    .topnav-centered a {
-      float: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    .topnav a:hover {
+      background-color: #98B0B2;
     }
 
     .topnav a.active {
@@ -70,10 +67,8 @@
   </div>
 
   <div class="topnav">
-    <div class="topnav-centered">
-      <a class="active" href="#home">Home</a>
-      <a href="#about">About Me</a>
-    </div>
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About Me</a>
   </div>
 
   <main class="flex w-full max-w-screen-md flex-col items-center justify-center gap-24 px-4 py-6 md: gap-40">
