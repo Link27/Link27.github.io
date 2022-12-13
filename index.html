@@ -20,7 +20,7 @@
     .banner {
       /*background: url('/images/triforcebanner.png') center;*/
       height: 175px;
-      background-color: rgba(0,51,82,.5);
+      background-color: rgba(0,51,82,0.5);
     }
 
     .banner__content {
@@ -34,7 +34,7 @@
       position: relative;
       overflow: hidden;
       text-align: center;
-      background-color: rgba(0,51,82,.5);
+      background-color: rgba(0,51,82,0.5);
     }
 
     .topnav a {
@@ -54,6 +54,47 @@
     .topnav a.active {
       background-color: #98B0B2;
     }
+
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    section .layout {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      padding: 50px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 10px;
+    }
+
+    section .layout::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    section .layout h1 {
+      position: relative;
+      text-align: center;
+      color: rgb(36, 168, 36);
+    }
+
+    section .layout p {
+      position: relative;
+      text-align: justify;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -71,12 +112,14 @@
     <a href="#about">About Me</a>
   </div>
 
-  <main class="flex w-full max-w-screen-md flex-col items-center justify-center gap-24 px-4 py-6 md: gap-40">
-    <section class="flex w-full flex-col gap-8 rounded-x1 border border-light-12/160 bg-light-6/160 py-6 px-4 backdrop-blur-md transition md:px-8">
-      <p>
-        "Putting in some sample text to view"
+  <section>
+    <div class="layout">
+      <h1>Hello There!</h1>
+
+      <p class="py-2">
+        Insert text here!
       </p>
-    </section>
-  </main>
+    </div>
+  </section>>
 </body>
 </html>
