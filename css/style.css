@@ -1,0 +1,91 @@
+html,
+body {
+    margin: 0;
+    position: relative;
+    background: url('/images/rawpixel-image.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-attachment: fixed;
+}
+
+.banner {
+    height: 175px;
+    background-color: rgba(0,51,82,0.5);
+}
+
+.banner__content {
+    padding: 25px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+.topnav {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(0,51,82,0.5);
+}
+
+.topnav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #98B0B2;
+}
+
+.topnav a.active {
+    background-color: #98B0B2;
+}
+
+section {
+    position: relative;
+    top: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+section .layout {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    max-width: 600px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: rgba(0,51,82,0.60);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+section .layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+section .layout h1 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section .layout p {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    overflow-wrap: break-word;
+}
