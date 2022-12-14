@@ -7,6 +7,23 @@
   <meta name="description" content="Welcome to my website! Looking forward to adding information about me, my skills, and some projects">
   <link rel="icon" href="/images/triforceicon.png">
   <link href="/css/style.css" rel="stylesheet">
+
+  <style>
+    #extend {display: none;}
+
+    .arrow {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+
+    .down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+  </style>
+
 </head>
 <body>
   <div class="banner">
@@ -30,15 +47,34 @@
 
       <p class="py-2" style="font-family: 'Times New Roman', Times, serif">
         <img class="avatar" src="/images/Self.jfif" alt="Self" style="width:200px"></br>
-        Once again, I am James Sastamoine! I am currently 28 years old and have spent most of my life here in <b>Omaha, Nebraska</b>.</br>
+        Once again, I am James Sastamoine! I am currently 28 years old and have spent most of my life here in <b>Omaha, Nebraska</b>.</br></br>
         I have been working with technology starting at a youngish age of 12 when I got my first iPhone Touch. I was very into the jailbreaking 
-        scene and also did a lot of self repairs and customization that really sparked my love for technology.</br>
-        (MY EDUCATION)</br>
+        scene and also did a lot of self repairs and customization that really sparked my love for technology.</br></br>
+        <h3><img src="/images/books.png" alt="Books" width="14" height="14"> My Education</h3><button onclick="extendDropDown()" id="arrow"><i class="arrow down"></i></button></br>
+        <span id="extend"></span>
+        </br></br>
         (MY HOBBIES)</br>
         (MY GOALS)</br>
         Update?!
       </p>
     </div>
   </section>
+
+<script>
+  function extendDropDown() {
+    var revealText = document.getElementById("extend");
+    var dropArrow = document.getElementById("dropArrow");
+    var status = false;
+
+    if (status == false){
+      revealText.style.display = "none";
+      dropArrow.innerHTML = "Extend";
+    } else {
+      revealText.style.display = "inline";
+      dropArrow.innerHTML = "Extended";
+    }
+  }
+</script> 
+
 </body>
 </html>
