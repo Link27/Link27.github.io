@@ -89,7 +89,7 @@ section .layout p {
     overflow-wrap: break-word;
 }
 
-section .layout .avatar img {
+section .layout .avatar {
     border-radius: 50%;
     display: block;
     width: 60%;
