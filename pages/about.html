@@ -18,12 +18,12 @@
       padding: 3px;
     }
 
-    .down {
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
+    .up {
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
     }
 
-    .downArrow{
+    .upArrow{
       border: none;
       background: none;
     }
@@ -47,15 +47,15 @@
   </div>
 
   <section>
-    <div class="layout">
+    <div class="about">
       <h1><img src="/images/triforceicon2.png" alt="World" width="18" height="18"> About Me <img src="/images/triforceicon2.png" alt="World" width="18" height="18"></h1>
 
       <p class="py-2" style="font-family: 'Times New Roman', Times, serif">
         <img class="avatar" src="/images/Self.jfif" alt="Self" style="width:200px"></br>
         Once again, I am James Sastamoine! I am currently 28 years old and have spent most of my life here in <b>Omaha, Nebraska</b>.</br></br>
         I have been working with technology starting at a youngish age of 12 when I got my first iPhone Touch. I was very into the jailbreaking 
-        scene and also did a lot of self repairs and customization that really sparked my love for technology.</br></br>
-        <h3><div style="float: left;"><img src="/images/books.png" alt="Books" width="14" height="14"> My Education</div><button style="border: none; background: none; float: right;" class="downArrow" onclick="extendDropDown()" id="arrow"><i class="arrow down"></i></button></h3></br>
+        scene and also did a lot of self repairs and customization that really sparked my love for technology.</br>
+        <h3><div style="float: left;"><img src="/images/books.png" alt="Books" width="14" height="14"> My Education</div><button style="border: none; background: none; float: right;" class="upArrow" onclick="extendDropDown()" id="arrow"><i class="arrow up"></i></button></h3></br>
         <span id="extend"></span>
         </br></br>
         (MY HOBBIES)</br>
@@ -67,18 +67,17 @@
 
 <script>
   function extendDropDown() {
+    var arrow = document.getElementById("arrow")
     var revealText = document.getElementById("extend");
-    var dropArrow = document.getElementById("dropArrow");
-    var status = false;
-
-    if (status == false){
+  
+    if (revealText.style.display === "inline"){
       revealText.style.display = "none";
-      dropArrow.innerHTML = "Extend";
+      arrow.style.transform = "rotate(360deg)";
     } else {
       revealText.style.display = "inline";
-      dropArrow.innerHTML = "Extended";
+      arrow.style.transform = "rotate(-180deg)";
     }
-  }
+}
 </script> 
 
 </body>
