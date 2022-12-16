@@ -67,9 +67,22 @@
     <div class="layout">
       <h1><img src="/images/project.png" alt="Project" width="18" height="18"> Projects <img src="/images/project.png" alt="Project" width="18" height="18"></h1>
 
-      <img src="/images/cuberunner.gif">
+      <img id="cubeRunner" src="/images/cuberunner.jpg" />
     </div>
   </section>
+
+  <script>
+    $(function() {
+      $("#cubeRunner").hover(
+        function() {
+          $(this).attr("src", "/images/cuberrunner.gif");
+        },
+        function() {
+          $(this).attr("src", "/images/cuberunner.jpg");
+        }
+      )
+    });
+  </script>
 
   <footer style="text-align: center;">
     &copy;<em id="date"></em> 2022 James Sastamoine
