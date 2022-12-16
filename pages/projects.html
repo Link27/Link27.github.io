@@ -62,11 +62,15 @@
     }
 
     .button{
-      border: none;
+      border: 1px solid rgba(108,122,137,0.25);
       background: none;
+      background-image: url("/images/cuberunner.jpg");
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: 75px 75px;
       cursor: pointer;
       width: 100%;
-      height: 50px;
+      height: 75px;
       border-radius: 8px;
       display: block;
     }
@@ -99,7 +103,9 @@
 
       <!--<img class="static" src="/images/cuberunner.jpg"><img class="active" src="/images/cuberunner.gif">-->
 
-      <button class="button" onClick="extendCubeRunner"><h2 style="float: left;"><!--<img src="/images/cuberunner.jpg" alt="Cube Runner" width="50" height="50">-->Cube Runner</h2></button>
+      <!--<button class="button" onClick="extendCubeRunner"><h2 style="float: left;"><img src="/images/cuberunner.jpg" alt="Cube Runner" width="50" height="50">Cube Runner</h2></button>-->
+
+      <button class="button" onClick="extendCubeRunner()"><h2 style="float: left; margin: 0px 0px 0px 50px;">Cube Runner</h2></button>
 
     </div>
   </section>
