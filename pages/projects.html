@@ -103,7 +103,7 @@
       font-size: 18px;
     }
 
-    #cubeExpand {
+    #blockExpand {
       display: none;
     }
   </style>
@@ -129,22 +129,22 @@
     <div class="layout">
       <h1><img src="/images/project.png" alt="Project" width="18" height="18"> Projects <img src="/images/project.png" alt="Project" width="18" height="18"></h1>
       <hr></br>
-      <button class="button" onClick="expandCubeRunner()"><h2>Cube Runner</h2><div id="cubeID"></div></button>
-      <span id="cubeExpand">
-        <div id="cubeID"></div>
+      <button class="button" onClick="expandBlockRunner()"><h2>Block Runner</h2><div id="blockID"></div></button>
+      <span id="blockExpand">
+        <div id="blockID"></div>
       </span>
       </br><hr>
     </div>
   </section>
 
   <script>
-    var cubeDescription = '<p style="display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: left; margin: 30px 0px 0px 80px; font-size: 18px;">A simple game made within Unity. The object of the game is to avoid walls to reach the end goal.</p>';
-    document.getElementById("cubeID").innerHTML = cubeDescription;
+    var cubeDescription = '<p style="display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: left; margin: 30px 0px 0px 80px; font-size: 18px;">A simple game made within Unity. The object of the game is to avoid walls to reach the end goal.</br>The game initally started off with just a cube as the only character, but as I progressed through building the game I ended up adding a character select screen on the main menu along with a color selector. Although new character shapes have been added, I decided to still keep the name <b>Block Runner</b> to remind myself where the game initially started.</br>This was the first game I started and had planned to do more and still hope to. Juggling between a fulltime job and taking care of my family has made finding more time a bit of a struggle. I do hope to continue this game though just to keep finding new ideas to incorporate and see how far my imagination can take me.</p>';
+    document.getElementById("blockID").innerHTML = cubeDescription;
   </script>
 
   <script>
-    function expandCubeRuner() {
-      var revealText = document.getElementById("cubeExpand");
+    function expandBlockRuner() {
+      var revealText = document.getElementById("blockExpand");
     
       if (revealText.style.display === "inline"){
         revealText.style.display = "none";
