@@ -149,7 +149,7 @@
         I have been working with technology starting at a youngish age of 12 when I got my first iPhone Touch. I was very into the jailbreaking 
         scene and also did a lot of self repairs and customization that really sparked my love for technology.</br>
         <hr>
-        <button class="button" onClick="extendEduDropDown()" id="eduButton"><h2 style="float: left;"><div id="thumbwrap"><a class="thumb" href="#"><img src="/images/books.png" alt="Books" width="14" height="14"><span><img src="/images/books.png" alt="Books" width="50" height="50"></span></a></div>My Education</h2><h2 style="float: right;"><i class="arrow up" id="eduArrow"></i></h2></button>
+        <button class="button" onClick="extendEduDropDown()"><h2 style="float: left;"><div id="thumbwrap"><a class="thumb" href="#"><img src="/images/books.png" alt="Books" width="14" height="14"><span><img src="/images/books.png" alt="Books" width="50" height="50"></span></a></div>My Education</h2><h2 style="float: right;"><i class="arrow up" id="eduArrow"></i></h2></button>
         <span id="eduExtend">
           <p class="py-2" style="margin-left: 15px;">
             I studied <b>Computer Science</b> at the <b>University of Nebraska, Omaha</b> starting in August of 2012. Due to juggling a fulltime job on top of going to school, it took me a bit longer to earn my degree. But in 
@@ -157,16 +157,25 @@
           </p>
         </span>
         <hr>
-        <button class="button" onClick="extendHobDropDown()" id="hobButton"><h2 style="float: left;"><div id="thumbwrap"><a class="thumb" href="#"><img src="/images/baseball.png" alt="Baseball" width="14" height="14"><span><img src="/images/baseball.png" alt="Baseball" width="50" height="50"></span></a></div>My Hobbies</h2><h2 style="float: right;"><i class="arrow up" id="hobArrow"></i></h2></button>
+        <button class="button" onClick="extendHobDropDown()"><h2 style="float: left;"><div id="thumbwrap"><a class="thumb" href="#"><img src="/images/baseball.png" alt="Baseball" width="14" height="14"><span><img src="/images/baseball.png" alt="Baseball" width="50" height="50"></span></a></div>My Hobbies</h2><h2 style="float: right;"><i class="arrow up" id="hobArrow"></i></h2></button>
         <span id="hobExtend">
           <p class="py-2" style="margin-left: 15px;">
-            I studied <b>Computer Science</b> at the <b>University of Nebraska, Omaha</b> starting in August of 2012. Due to juggling a fulltime job on top of going to school, it took me a bit longer to earn my degree. But in 
-            May of 2020, I completed my Bachelor's degree in <b>Computer Science</b>.
+            Growing up baseball was one of my favorite sports and I played through most of my childhood. Now that I have grown up some more and clearly didn't become a professional baseball player, I haved moved onto fantasy
+            baseball as one of my current hobbies. Going off of the sports theme, I also do love to play disc golf and also go bowling ever now and then. Still shooting for my first 300 game! (Current best is 289). From a technology
+            standpoint for hobbies, I love to find mini projects to do whether it is on my computer or with smaller devices like cell phones or controllers. I still repair cell phones to this day whether it be for myself or close
+            friends/family. I also built a custom NAS back in 2019 and host video game servers for my friends with custom scripts to help automate the process as much as possible.
           </p>
         </span>
-        </br></br>
-        (MY GOALS)</br>
-        Update?!
+        <hr>
+        <button class="button" onClick="extendGoalDropDown()"><h2 style="float: left;"><div id="thumbwrap"><a class="thumb" href="#"><img src="/images/medal.png" alt="Medal" width="14" height="14"><span><img src="/images/medal.png" alt="Medal" width="50" height="50"></span></a></div>My Goals</h2><h2 style="float: right;"><i class="arrow up" id="goalArrow"></i></h2></button>
+        <span id="goalExtend">
+          <p class="py-2" style="margin-left: 15px;">
+            Growing up baseball was one of my favorite sports and I played through most of my childhood. Now that I have grown up some more and clearly didn't become a professional baseball player, I haved moved onto fantasy
+            baseball as one of my current hobbies. Going off of the sports theme, I also do love to play disc golf and also go bowling ever now and then. Still shooting for my first 300 game! (Current best is 289). From a technology
+            standpoint for hobbies, I love to find mini projects to do whether it is on my computer or with smaller devices like cell phones or controllers. I still repair cell phones to this day whether it be for myself or close
+            friends/family. I also built a custom NAS back in 2019 and host video game servers for my friends with custom scripts to help automate the process as much as possible.
+          </p>
+        </span>
       </p>
     </div>
   </section>
@@ -189,6 +198,20 @@
   function extendHobDropDown() {
     var arrow = document.getElementById("hobArrow")
     var revealText = document.getElementById("hobExtend");
+  
+    if (revealText.style.display === "inline"){
+      revealText.style.display = "none";
+      arrow.style.transform = "rotate(-135deg)";
+    } else {
+      revealText.style.display = "inline";
+      arrow.style.transform = "rotate(45deg)";
+    }
+}
+</script> 
+<script>
+  function extendGoalDropDown() {
+    var arrow = document.getElementById("goalArrow")
+    var revealText = document.getElementById("goalExtend");
   
     if (revealText.style.display === "inline"){
       revealText.style.display = "none";
