@@ -59,15 +59,6 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .static {
-      position: absolute;
-      background: none;
-    }
-
-    .static:hover {
-      opacity: 0;
-    }
-
     .button {
       border: 1px solid rgba(108,122,137,0.85);
       background: none;
@@ -130,6 +121,11 @@
       clear: both;
       display: table;
     }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
   </style>
 </head>
 <body>
@@ -157,23 +153,20 @@
       <span id="blockExpand">
         <h2 style="float: left;"><button class="backButton" onClick="expandBlockRunner()" id="backButton"><div style="color: white; margin: -5px 0px 0px 0px;">&#8592;</div></button> Block Runner</h2>
         </br></br></br></br>
-        <!--<div class="row">
-          <div style="float: left;">
-            <img class="static" src="/images/blockRunner.jpg" width="288" height="214"><img class="active" src="/images/blockRunner.gif" width="288" height="214">
-          </div>
-          <div style="text-align: right;">
-            <img class="static" src="/images/blockRunnerFall.jpg" width="288" height="214"><img class="active" src="/images/blockRunnerFall.gif" width="288" height="214">
-          </div>
-        </div>-->
         <div class="row">
+          <!---
           <div style="float: left;">
             <img src="/images/blockRunner.jpg" width="288" height="214" onmouseover="this.src='/images/blockRunner.gif'" onmouseout="this.src='/images/blockRunner.jpg'">
           </div>
           <div style="text-align: right;">
             <img src="/images/blockRunnerFall.jpg" width="288" height="214" onmouseover="this.src='/images/blockRunnerFall.gif'" onmouseout="this.src='/images/blockRunnerFall.jpg'">
           </div>
+          -->
+          <div class="container">
+            <img src="/images/blockRunner.jpg" width="288" height="214" onmouseover="this.src='/images/blockRunner.gif'" onmouseout="this.src='/images/blockRunner.jpg'">
+            <img src="/images/blockRunnerFall.jpg" width="288" height="214" onmouseover="this.src='/images/blockRunnerFall.gif'" onmouseout="this.src='/images/blockRunnerFall.jpg'">
+          </div>
         </div>
-        <!--<div style="clear: both;">-->
         </br>
           <div id="blockID2" style="clear: both; display: block;"></div>
         </div>
