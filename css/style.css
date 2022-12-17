@@ -43,3 +43,9 @@ body {
 .topnav a.active {
     background-color: #98B0B2;
 }
+
+img {
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+}
