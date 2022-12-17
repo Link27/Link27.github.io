@@ -43,8 +43,3 @@ body {
 .topnav a.active {
     background-color: #98B0B2;
 }
-
-img {
-    object-fit: scale-down;
-    max-width: 100%;
-}
