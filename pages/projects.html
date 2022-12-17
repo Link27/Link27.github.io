@@ -124,6 +124,12 @@
     #blockExpand {
       display: none;
     }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
   </style>
 </head>
 <body>
@@ -151,11 +157,13 @@
       <span id="blockExpand">
         <h2 style="float: left;"><button class="backButton" onClick="expandBlockRunner()" id="backButton"><div style="color: white; margin: -5px 0px 0px 0px;">&#8592;</div></button> Block Runner</h2></br></br>
         </br></br>
+        <div row="row">
         <div style="float: left;">
           <img class="static" src="/images/blockRunner.jpg" width="288" height="214"><img class="active" src="/images/blockRunner.gif" width="288" height="214">
         </div>
         <div style="float: right;">
           <img class="static" src="/images/blockRunnerFall.jpg" width="288" height="214"><img class="active" src="/images/blockRunnerFall.gif" width="288" height="214">
+        </div>
         </div>
         </br></br></br><div id="blockID2" style="display: block;"></div>
       </span>
