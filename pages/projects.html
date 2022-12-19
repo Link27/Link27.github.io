@@ -99,6 +99,10 @@
       display: none;
     }
 
+    #webExpand {
+      display: none;
+    }
+
     .column {
       float: left;
       width: 50%;
@@ -151,9 +155,8 @@
             <img src="/images/blockFall.jpg" onmouseover="this.src='/images/blockFall.gif'" onmouseout="this.src='/images/blockFall.jpg'" style="width: 100%;">
           </div>
         </div>
-
         <p style="font-size: 12px; text-align: center;">(Mouse over images)</p>
-          <div id="blockID2" style="clear: both; display: block;"></div>
+        <div id="blockID2" style="clear: both; display: block;"></div>
       </span>
       <button class="button" onClick="expandMinecraft()" id="minecraftButton" style="background-image: url(/images/minecraft.PNG);"><h2>Video Game Server Automation</h2><div id="minecraftID1" style="display: inline; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"></div></button>
       <span id="minecraftExpand">
@@ -168,7 +171,15 @@
           </div>
         </div>
         <p style="font-size: 12px; text-align: center;">(Video demonstration of backup script)</p>
-          <div id="minecraftID2" style="clear: both; display: block;"></div>
+        <div id="minecraftID2" style="clear: both; display: block;"></div>
+      </span>
+      <button class="button" onClick="expandWebsite()" id="webButton" style="background-image: url(/images/website.PNG);"><h2>Github Website</h2><div id="webID1" style="display: inline; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"></div></button>
+      <span id="webExpand">
+        <h2 style="float: left; top: -5px;"><button class="backButton" onClick="expandWebsite()" id="backButton"><div style="color: white; margin: -5px 0px 0px 0px;">&#8592;</div></button> Github Website</h2>
+        <div style="clear: both;"></div>
+        <div style="text-align: center;"><a href="https://github.com/Link27/Link27.github.io" target="_blank"><img src="/images/github.png" alt="Github Icon" style="width: 200px; height: 200px;"></a></div>
+        <p style="font-size: 12px; text-align: center;">(Click the picture to see the repository for this website)</p>
+        <div id="webID2" style="clear: both; display: block;"></div>
       </span>
       <hr style="margin-top: 10px;">
     </div>
@@ -182,23 +193,31 @@
     var minecraftDescription = '<p style="text-align: justify; font-size: 18px;">I have been hosting video game servers with my friends starting from the year 2014. Over the many years I have hosted numerous servers using different methods whether it was locally hosted on my own computer, hosted on a dedicated computer, hosted on a VM (Virtual Machine), or now hosted in a <a href="https://www.ixsystems.com/documentation/truenas/11.3-U2/jails.html#:~:text=Jails%20are%20a%20lightweight%2C%20operating,for%20jail%20and%20plugin%20management." target="_blank">jail</a> in TrueNAS.</br></br><i style="font-size: 16px; display: block; margin-left: 15px; text-align: justify;"><a href="https://en.wikipedia.org/wiki/TrueNAS" target="_blank">TrueNAS</a> is the open-source operation system that I currently run off of a custom built <a href="https://en.wikipedia.org/wiki/Nas" target="_blank">NAS</a> I had built back in early 2020. This started off as a normal NAS device, then progressed into also hosting a plex media server, and then to migrating my video game servers to also be hosted off of the same device.</i></br>Since I was personally hosting gaming servers, one of my main goals was to always ensure I had backups in case some type of file corruption or something similar to that matter. The video demonstration above shows the concept and functionality of a backukp script I have created for my Minecraft servers. (You can view the actual script <a href="/pages/minecraftScript.html" target="_blank">here</a>). My full script keeps a total of 8 backups and has intelect to remove the oldest directory and shift all other directories to make room again for the newest backup.</br></br>This script is written in bash script as I was currently bash at the time of creating this script and wanted to see how certain functions world work within the scripting language. All of my gaming servers are hosted on a linux based platform so they all have adapted well with no need to change anything besides the file locations and folder backup.</p>';
     document.getElementById("minecraftID1").innerHTML = minecraftDescription;
     document.getElementById("minecraftID2").innerHTML = minecraftDescription;
+
+    var webDescription = '<p style="text-align: justify; font-size: 18px;">This website has been created to show some of the skills that I possess and putting them into a more centralized location along with some other general information about myself.</br></br>HTML was one of the first skills I learned that helped spark my love IT. Although it has been many years since I have last used HTML I was still looking forward to the challenge in creating this website.</br></br>This website was built completely from scratch with no templates used. To add a bit more customization as well I made sure not to have everything as a copy and paste section but inside give some slight changes here and there to really show some extra diversity.</br></br>I am very excited to has this website now as an extra platform to show my work and hope to continue to add more projects to my name along with adding new features to the site if a new idea was to arise.</p>';
+    document.getElementById("webID1").innerHTML = webDescription;
+    document.getElementById("webID2").innerHTML = webDescription;
+
+
   </script>
 
   <script>
     function expandBlockRunner() {
       var revealText = document.getElementById("blockExpand");
       var btnStatus = document.getElementById("blockButton");
-      var spacing = document.getElementById("removeSpacing");
       var otherBtns1 = document.getElementById("minecraftButton");
+      var otherBtns2 = document.getElementById("webButton");
     
       if (revealText.style.display === "inline") {
         revealText.style.display = "none";
         btnStatus.style.display = "inline";
         otherBtns1.style.display = "inline";
+        otherBtns2.style.display = "inline";
       } else {
         revealText.style.display = "inline";
         btnStatus.style.display = "none";
         otherBtns1.style.display = "none";
+        otherBtns2.style.display = "none";
       }
   }
   </script>
@@ -208,15 +227,39 @@
     var revealText = document.getElementById("minecraftExpand");
     var btnStatus = document.getElementById("minecraftButton");
     var otherBtns1 = document.getElementById("blockButton");
+    var otherBtns2 = document.getElementById("webButton");
   
     if (revealText.style.display === "inline") {
       revealText.style.display = "none";
       btnStatus.style.display = "inline";
       otherBtns1.style.display = "inline";
+      otherBtns2.style.display = "inline";
     } else {
       revealText.style.display = "inline";
       btnStatus.style.display = "none";
       otherBtns1.style.display = "none";
+      otherBtns2.style.display = "none";
+    }
+}
+</script>
+
+<script>
+  function expandWebsite() {
+    var revealText = document.getElementById("webExpand");
+    var btnStatus = document.getElementById("webButton");
+    var otherBtns1 = document.getElementById("blockButton");
+    var otherBtns2 = document.getElementById("minecraftButton");
+  
+    if (revealText.style.display === "inline") {
+      revealText.style.display = "none";
+      btnStatus.style.display = "inline";
+      otherBtns1.style.display = "inline";
+      otherBtns2.style.display = "inline";
+    } else {
+      revealText.style.display = "inline";
+      btnStatus.style.display = "none";
+      otherBtns1.style.display = "none";
+      otherBtns2.style.display = "none";
     }
 }
 </script>
