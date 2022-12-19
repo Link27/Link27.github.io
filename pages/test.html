@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James Sastamoine</title>
+  <meta name="description" content="Welcome to my website! Looking forward to adding information about me, my skills, and some projects">
+  <link rel="icon" href="/images/triforceicon.png">
+  <link href="/css/style.css" rel="stylesheet">
+  <style>
+    section .layout h1 {
+      position: relative;
+      text-align: center;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    section .layout h2 {
+      position: relative;
+      text-align: center;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    section .layout h4 {
+      position: relative;
+      text-align: center;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    section .layout p {
+      position: relative;
+      color: white;
+      font-size: 18px;
+      overflow-wrap: break-word;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .button {
+      border: 1px solid rgba(108,122,137,0.85);
+      background: none;
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: 75px 75px;
+      cursor: pointer;
+      width: 100%;
+      height: 75px;
+      border-radius: 8px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .button:hover {
+      background-color: rgba(0,51,82,0.75);
+    }
+
+    .backButton {
+      border: none;
+      background: none;
+      cursor: pointer;
+      width: 40px;
+      height: 24px;
+      border-radius: 8px;
+      display: inline-block;
+      font-size: 24px;
+      text-align: center;
+      margin: -10px 0px 0px 0px;
+    }
+
+    .backButton:hover {
+      background-color: rgba(0,51,82,0.75);
+    }
+
+    .button h2 {
+      position: absolute;
+      float: left;
+      margin: 0px 0px 0px 80px;
+    }
+
+    .button p {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: left;
+      margin: 30px 0px 0px 80px;
+      font-size: 18px;
+      height: 20px;
+    }
+
+    #blockExpand {
+      display: none;
+    }
+
+    #minecraftExpand {
+      display: none;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .container {
+      
+      justify-content: space-between;
+      width: 100%;
+      object-fit: scale-down;
+      background-color: #333;
+    }
+  </style>
+  </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="banner__content">
+          <div class="banner__text">
+            <h1><strong>James Sastamoine</strong></h1>
+            <h3><strong>Desktop Administrator / Software Developer / Automation Tester</strong></h3>
+            <h5>(Site currently under construction...)</h5>
+          </div>
+        </div>
+      </div>
+    
+      <div class="topnav">
+        <a class="active" href="/pages/index.html">Home</a>
+        <a href="/pages/about.html">About Me</a>
+        <a href="/pages/projects.html">Projects</a>
+      </div>
+
+      <section>
+        <div class="layout">
+          <h1><img src="/images/project.png" alt="Project" width="18" height="18"> Projects <img src="/images/project.png" alt="Project" width="18" height="18"></h1>
+          <hr style="margin-bottom: 10px;">
+          <button class="button" onClick="expandBlockRunner()" id="blockButton" style="background-image: url(/images/blockMain.jpg);"><h2>Block Runner</h2><div id="blockID1" style="display: inline; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"></div></button>
+          <span id="blockExpand">
+            <h2 style="float: left; top: -5px;"><button class="backButton" onClick="expandBlockRunner()" id="backButton"><div style="color: white; margin: -5px 0px 0px 0px;">&#8592;</div></button> Block Runner</h2>
+            <div style="clear: both;"></div>
+            <div class="row">
+              <div class="container">
+                <img src="/images/blockMain.jpg" onmouseover="this.src='/images/blockMain.gif'" onmouseout="this.src='/images/blockMain.jpg'">
+                <img src="/images/blockFall.jpg" onmouseover="this.src='/images/blockFall.gif'" onmouseout="this.src='/images/blockFall.jpg'">
+              </div>
+            </div>
+              <div id="blockID2" style="clear: both; display: block;"></div>
+          </span>
+          <hr style="margin-top: 10px;">
+        </div>
+      </section> 
+
+      <script>
+        var cubeDescription = '';
+        document.getElementById("blockID1").innerHTML = cubeDescription;
+        document.getElementById("blockID2").innerHTML = cubeDescription;
+    
+        var minecraftDescription = '<p style="text-align: left; font-size: 18px;">Minecraft server information</p>';
+        document.getElementById("minecraftID1").innerHTML = minecraftDescription;
+        document.getElementById("minecraftID2").innerHTML = minecraftDescription;
+      </script>
+    
+      <script>
+        function expandBlockRunner() {
+          var revealText = document.getElementById("blockExpand");
+          var btnStatus = document.getElementById("blockButton");
+          var spacing = document.getElementById("removeSpacing");
+          var otherBtns1 = document.getElementById("minecraftButton");
+        
+          if (revealText.style.display === "inline") {
+            revealText.style.display = "none";
+            btnStatus.style.display = "inline";
+            otherBtns1.style.display = "inline";
+          } else {
+            revealText.style.display = "inline";
+            btnStatus.style.display = "none";
+            otherBtns1.style.display = "none";
+          }
+      }
+      </script>
+    
+    <script>
+      function expandMinecraft() {
+        var revealText = document.getElementById("minecraftExpand");
+        var btnStatus = document.getElementById("minecraftButton");
+        var otherBtns1 = document.getElementById("blockButton");
+      
+        if (revealText.style.display === "inline") {
+          revealText.style.display = "none";
+          btnStatus.style.display = "inline";
+          otherBtns1.style.display = "inline";
+        } else {
+          revealText.style.display = "inline";
+          btnStatus.style.display = "none";
+          otherBtns1.style.display = "none";
+        }
+    }
+    </script>
+    
+      <footer style="text-align: center;">
+        &copy;<em id="date"></em> 2022 James Sastamoine
+      </footer>
+</body>
+</html>

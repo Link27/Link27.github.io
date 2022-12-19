@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James Sastamoine</title>
+  <meta name="description" content="Welcome to my website! Looking forward to adding information about me, my skills, and some projects">
+  <link rel="icon" href="/images/triforceicon.png">
+  <link href="/css/style.css" rel="stylesheet">
+  <style>
+    section .layout p {
+      position: relative;
+      color: white;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="layout">
+        <p>
+            #!/bin/bash</br></br>
+            echo "****************************"</br>
+            echo "Backup Minecraft Server"</br>
+            echo "****************************"</br></br>
+            BackupWorldLoc="*insert backup world location*"</br>
+            CurrentWorldLoc="*insert current world directory location*"</br></br>
+            if [ -d "${BackupWorldLoc}Backup1" ]; then</br>
+            &emsp;echo "Backup1 Does Exist"</br>
+            &emsp;if [ -d "${BackupWorldLoc}Backup2" ]; then</br>
+            &emsp;&emsp;echo "Backup2 Does Exist"</br>
+            &emsp;&emsp;if [ -d "${BackupWorldLoc}Backup3" ]; then</br>
+            &emsp;&emsp;&emsp;echo "Backup3 Does Exist"</br>
+            &emsp;&emsp;&emsp;if [ -d "${BackupWorldLoc}Backup4" ]; then</br>
+            &emsp;&emsp;&emsp;&emsp;echo "Backup4 Does Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;if [ -d "${BackupWorldLoc}Backup5" ]; then</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup5 Does Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;if [ -d "${BackupWorldLoc}Backup6" ]; then</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup6 Does Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if [ -d "${BackupWorldLoc}Backup7" ]; then</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup7 Does Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if [ -d "${BackupWorldLoc}Backup8" ]; then</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup8 Does Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;rm -r "${BackupWorldLoc}Backup1/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup1 Has Been Removed"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${BackupWorldLoc}Backup2/." "${BackupWorldLoc}Backup1/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;rm -r "${BackupWorldLoc}Backup2/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup2 Has Been Removed"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${BackupWorldLoc}Backup3/." "${BackupWorldLoc}Backup2/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;rm -r "${BackupWorldLoc}Backup3/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup3 Has Been Removed"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${BackupWorldLoc}Backup4/." "${BackupWorldLoc}Backup3/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;rm -r "${BackupWorldLoc}Backup4/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup4 Has Been Removed"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${BackupWorldLoc}Backup5/." "${BackupWorldLoc}Backup4/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;rm -r "${BackupWorldLoc}Backup5/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup5 Has Been Removed"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${BackupWorldLoc}Backup6/." "${BackupWorldLoc}Backup5/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;rm -r "${BackupWorldLoc}Backup6/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup6 Has Been Removed"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${BackupWorldLoc}Backup7/." "${BackupWorldLoc}Backup6/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;rm -r "${BackupWorldLoc}Backup7/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup7 Has Been Removed"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${BackupWorldLoc}Backup8/." "${BackupWorldLoc}Backup7/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;rm -r "${BackupWorldLoc}Backup8/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup8 Has Been Removed"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp  -r "${CurrentWorldLoc}world/." "${BackupWorldLoc}Backup8/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup8 Has Been Created"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup8 Does Not Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${CurrentWorldLoc}world/." "${BackupWorldLoc}Backup8/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup8 Has Been Created"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;fi</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup7 Does Not Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${CurrentWorldLoc}world/." "${BackupWorldLoc}Backup7/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup7 Has Been Created"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;fi</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;else</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup6 Does Not Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${CurrentWorldLoc}world/." "${BackupWorldLoc}Backup6/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup6 Has Been Created"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;fi</br>
+            &emsp;&emsp;&emsp;&emsp;else</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup5 Does Not Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;cp -r "${CurrentWorldLoc}world/." "${BackupWorldLoc}Backup5/"</br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;echo "Backup5 Has Been Created"</br>
+            &emsp;&emsp;&emsp;&emsp;fi</br>
+            &emsp;&emsp;&emsp;else</br>
+            &emsp;&emsp;&emsp;&emsp;echo "Backup4 Does Not Exist"</br>
+            &emsp;&emsp;&emsp;&emsp;cp -r "${CurrentWorldLoc}world/." "${BackupWorldLoc}Backup4/"</br>
+            &emsp;&emsp;&emsp;&emsp;echo "Backup4 Has Been Created"</br>
+            &emsp;&emsp;&emsp;fi</br>
+            &emsp;&emsp;else</br>
+            &emsp;&emsp;&emsp;echo "Backup3 Does Not Exist"</br>
+            &emsp;&emsp;&emsp;cp -r "${CurrentWorldLoc}world/." "${BackupWorldLoc}Backup3/"</br>
+            &emsp;&emsp;&emsp;echo "Backup3 Has Been Created"</br>
+            &emsp;&emsp;fi</br>
+            &emsp;else</br>
+            &emsp;&emsp;echo "Backup2 Does Not Exist"</br>
+            &emsp;&emsp;cp -r "${CurrentWorldLoc}world/." "${BackupWorldLoc}Backup2/"</br>
+            &emsp;&emsp;echo "Backup2 Has Been Created"</br>
+            &emsp;fi</br>
+            else</br>
+            &emsp;echo "Backup1 Does Not Exist"</br>
+            &emsp;cp -r "${CurrentWorldLoc}world/." "${BackupWorldLoc}Backup1/"</br>
+            &emsp;echo "Backup1 Has Been Created"</br>
+            fi</br>
+        </p>
+    </div>
+  </section>
+
+  <footer style="text-align: center;">
+    &copy;<em id="date"></em> 2022 James Sastamoine
+  </footer>
+
+</body>
+</html>
