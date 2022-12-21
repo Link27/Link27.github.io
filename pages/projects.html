@@ -8,13 +8,6 @@
   <link rel="icon" href="/images/triforceicon.png">
   <link href="/css/style.css" rel="stylesheet">
   <style>
-    section .layout h1 {
-      position: relative;
-      text-align: center;
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
     section .layout h2 {
       position: relative;
       text-align: center;
@@ -158,27 +151,13 @@
     <a href="/pages/index.html">Home</a>
     <a href="/pages/about.html">About Me</a>
     <a class="active" href="/pages/projects.html">Projects</a>
+    <a href="/pages/contactMe.html">Contact Me</a>
   </div>
 
   <section>
     <div class="layout">
       <h1><img src="/images/project.png" alt="Project" width="18" height="18"> Projects <img src="/images/project.png" alt="Project" width="18" height="18"></h1>
       <hr style="margin-bottom: 10px;">
-      <button class="button" onClick="expandBlockRunner()" id="blockButton" style="background-image: url(/images/blockMain.jpg);"><h2>Block Runner</h2><div id="blockID1" style="display: inline; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"></div></button>
-      <span id="blockExpand">
-        <h2 style="float: left; top: -5px;"><button class="backButton" onClick="expandBlockRunner()" id="backButton"><div style="color: white; margin: -5px 0px 0px 0px;">&#8592;</div></button> Block Runner</h2>
-        <div style="clear: both;"></div>
-        <div class="row">
-          <div class="column">
-            <img src="/images/blockMain.jpg" onmouseover="this.src='/images/blockMain.gif'" onmouseout="this.src='/images/blockMain.jpg'" style="width: 100%;">
-          </div>
-          <div class="column">
-            <img src="/images/blockFall.jpg" onmouseover="this.src='/images/blockFall.gif'" onmouseout="this.src='/images/blockFall.jpg'" style="width: 100%;">
-          </div>
-        </div>
-        <p style="font-size: 12px; text-align: center;">(Mouse over images)</p>
-        <div id="blockID2" style="clear: both; display: block;"></div>
-      </span>
       <button class="button" onClick="expandSchool()" id="schoolButton" style="background-image: url(/images/yelpsmall.jpg);"><h2>School Projects</h2><div id="schoolID1" style="display: inline; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"></div></button>
       <span id="schoolExpand">
         <h2 style="float: left; top: -5px;"><button class="backButton" onClick="expandSchool()" id="backButton"><div style="color: white; margin: -5px 0px 0px 0px;">&#8592;</div></button> School Projects</h2>
@@ -193,6 +172,21 @@
         </div>
         <p style="font-size: 12px; text-align: center;">(Prototype images of a yelp website redisgn)</p>
         <div id="schoolID2" style="clear: both; display: block;"></div>
+      </span>
+      <button class="button" onClick="expandBlockRunner()" id="blockButton" style="background-image: url(/images/blockMain.jpg);"><h2>Block Runner</h2><div id="blockID1" style="display: inline; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"></div></button>
+      <span id="blockExpand">
+        <h2 style="float: left; top: -5px;"><button class="backButton" onClick="expandBlockRunner()" id="backButton"><div style="color: white; margin: -5px 0px 0px 0px;">&#8592;</div></button> Block Runner</h2>
+        <div style="clear: both;"></div>
+        <div class="row">
+          <div class="column">
+            <img src="/images/blockMain.jpg" onmouseover="this.src='/images/blockMain.gif'" onmouseout="this.src='/images/blockMain.jpg'" style="width: 100%;">
+          </div>
+          <div class="column">
+            <img src="/images/blockFall.jpg" onmouseover="this.src='/images/blockFall.gif'" onmouseout="this.src='/images/blockFall.jpg'" style="width: 100%;">
+          </div>
+        </div>
+        <p style="font-size: 12px; text-align: center;">(Mouse over images)</p>
+        <div id="blockID2" style="clear: both; display: block;"></div>
       </span>
       <button class="button" onClick="expandMinecraft()" id="minecraftButton" style="background-image: url(/images/minecraft.PNG);"><h2>Video Game Servers</h2><div id="minecraftID1" style="display: inline; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"></div></button>
       <span id="minecraftExpand">
@@ -222,9 +216,13 @@
   </section>
 
   <script>
-    var cubeDescription = '<p style="text-align: justify; font-size: 18px;">A simple game made within Unity. The object of the game is to avoid walls to reach the end goal.</br></br>The game initally started off with just a cube as the only character, but as I progressed through building the game I ended up adding a character select screen on the main menu along with a color selector. Although new character shapes have been added, I decided to keep the name <b>Block Runner</b> as a reminder of where the game started.</br></br>This was the first game I created and I still plan to do more with it. Once I have a little more free time, I would like to dive back into this project, find new ideas to incorporate, and see just how far my imagination can take me.</p>';
-    document.getElementById("blockID1").innerHTML = cubeDescription;
-    document.getElementById("blockID2").innerHTML = cubeDescription;
+    var schoolDescription = '<div class="schoolFormat" style="font-size: 18px; color: white; font-family: Arial, Helvetica, sans-serif; text-align: justify;">During the duration I had spent studying Computer Science at the Unversity of Nebraska, Omaha, of course I had come across a few projects whether they be solo or in a group that I have partaken in.</br></br>The pictures above represent a yelp site remodel. This was a group project where the end goal was to redesign yelp\'s website to make it more appealing and to also help point users to download their mobile app as well. We decided to go a somewhat simplistic on the homepage with some simple buttons to break down catergories. The idea behind this design was to design the homepage in a similar matter to the mobile app so it could be a simple transition over. Our bigger redesign we created was the seach section. We incorporated a randomise button that would allow you to put in a couple filters like price and distance, and then it would search through all matches and return one result. The idea behind this was to help with those indecisive people and letting the site be the final say. This whole model was created with the language TypeScript.</br></br>Many of these school projects are now lost due to being tied to a school account I no longer have access to, but I will provide a few descriptions of some of these past projects.</br></br><b>Galaga Mobile App</b><blockquote style="margin-top: 0px; font-size: 16px;">In an app development class, we were partnered up with one other teammate to create any type of mobile app whether it be a game or type of math solver tool. The partner I had at the time and I decided to build an imitation Galaga game. My partner and I had really good intentions to build a more extravagant version of the game, but my partner ended up dropping the class leaving me to finish solo. Due to this factor the game ended up being a bit more simple but the basic concept still created with some tweaks. This game was created using a drag-and-drop interface tool that was used for all students in the class.</blockquote><b>Movie Theater Website</b><blockquote style="margin-top: 0px; font-size: 16px;">This was another group project with teams of 4 to create a new concept for a movie theater website. The concept we came up with was while picking seat tickets, you were also able to view what that seat would look like as if you were physically in the theater. One of my teammates did 3D rendering of a mock-up theater to create this visuals. I contributed mostly on the frontend. This website was created using Java and JavaScript.</blockquote><b>Senior Project</b><blockquote style="margin-top: 0px; font-size: 16px;">For my senior project we were put into groups of 5 and our goal was to work with a real world client to build a prototype product based off of their needs/wants. We ended up working with a company called Kutak Rock which is a law firm in the United States with a location here in <b>Omaha, NE</b>. My contributions to this project was the client liason along with assistant with the frontend and backend development. The request from the client was a help desk ticketing system type application that allows more self-help options to users. We created a FAQ database that would allow users to start typing in their issue and would search through the database for a possible solution. The solutions would eitehr be a step by step walkthrough or possibly a button to press that would automate a fix. The last piece that we encorporated was the ticket submission screen that would automate grabbing computer information along with log files that would be bundled up and sent over email. Due to the company\'s strict security policies, all the testing was done with personal computers. The frontend was coded in TypeScript and the backend in C#.</blockquote></div>';
+    document.getElementById("schoolID1").innerHTML = schoolDescription;
+    document.getElementById("schoolID2").innerHTML = schoolDescription;
+
+    var blockDescription = '<p style="text-align: justify; font-size: 18px;">A simple game made within Unity. The object of the game is to avoid walls to reach the end goal.</br></br>The game initally started off with just a cube as the only character, but as I progressed through building the game I ended up adding a character select screen on the main menu along with a color selector. Although new character shapes have been added, I decided to keep the name <b>Block Runner</b> as a reminder of where the game started.</br></br>This was the first game I created and I still plan to do more with it. Once I have a little more free time, I would like to dive back into this project, find new ideas to incorporate, and see just how far my imagination can take me.</p>';
+    document.getElementById("blockID1").innerHTML = blockDescription;
+    document.getElementById("blockID2").innerHTML = blockDescription;
 
     var minecraftDescription = '<p style="text-align: justify; font-size: 18px;">I have been hosting video game servers with my friends starting from the year 2014. Over the many years I have hosted numerous servers using different methods whether it was locally hosted on my own computer, hosted on a dedicated computer, hosted on a VM (Virtual Machine), or now hosted in a <a href="https://www.ixsystems.com/documentation/truenas/11.3-U2/jails.html#:~:text=Jails%20are%20a%20lightweight%2C%20operating,for%20jail%20and%20plugin%20management." target="_blank">jail</a> in TrueNAS.</br></br><i style="font-size: 16px; display: block; margin-left: 15px; text-align: justify;"><a href="https://en.wikipedia.org/wiki/TrueNAS" target="_blank">TrueNAS</a> is the open-source operation system that I currently run off of a custom built <a href="https://en.wikipedia.org/wiki/Nas" target="_blank">NAS</a> I had built back in early 2020. This started off as a normal NAS device, then progressed into also hosting a plex media server, and then to migrating my video game servers to also be hosted off of the same device.</i></br>Since I was personally hosting gaming servers, one of my main goals was to always ensure I had backups in case some type of file corruption or something similar to that matter. The video demonstration above shows the concept and functionality of a backukp script I have created for my Minecraft servers. (You can view the actual script <a href="/pages/minecraftScript.html" target="_blank">here</a>). My full script keeps a total of 8 backups and has intelect to remove the oldest directory and shift all other directories to make room again for the newest backup.</br></br>This script is written in bash script as I was currently bash at the time of creating this script and wanted to see how certain functions world work within the scripting language. All of my gaming servers are hosted on a linux based platform so they all have adapted well with no need to change anything besides the file locations and folder backup.</p>';
     document.getElementById("minecraftID1").innerHTML = minecraftDescription;
@@ -233,10 +231,30 @@
     var webDescription = '<p style="text-align: justify; font-size: 18px;">This website has been created to show some of the skills that I possess and putting them into a more centralized location along with some other general information about myself.</br></br>HTML was one of the first skills I learned that helped spark my love IT. Although it has been many years since I have last used HTML I was still looking forward to the challenge in creating this website.</br></br>This website was built completely from scratch with no templates used. To add a bit more customization as well I made sure not to have everything as a copy and paste section but inside give some slight changes here and there to really show some extra diversity.</br></br>I am very excited to has this website now as an extra platform to show my work and hope to continue to add more projects to my name along with adding new features to the site if a new idea was to arise.</p>';
     document.getElementById("webID1").innerHTML = webDescription;
     document.getElementById("webID2").innerHTML = webDescription;
+  </script>
 
-    var schoolDescription = '<div class="schoolFormat" style="font-size: 18px; color: white; font-family: Arial, Helvetica, sans-serif; text-align: justify;">During the duration I had spent studying Computer Science at the Unversity of Nebraska, Omaha, of course I had come across a few projects whether they be solo or in a group that I have partaken in.</br></br>The pictures above represent a yelp site remodel. This was a group project where the end goal was to redesign yelp\'s website to make it more appealing and to also help point users to download their mobile app as well. We decided to go a somewhat simplistic on the homepage with some simple buttons to break down catergories. The idea behind this design was to design the homepage in a similar matter to the mobile app so it could be a simple transition over. Our bigger redesign we created was the seach section. We incorporated a randomise button that would allow you to put in a couple filters like price and distance, and then it would search through all matches and return one result. The idea behind this was to help with those indecisive people and letting the site be the final say. This whole model was created with the language TypeScript.</br></br>Many of these school projects are now lost due to being tied to a school account I no longer have access to, but I will provide a few descriptions of some of these past projects.</br></br><b>Galaga Mobile App</b><blockquote style="margin-top: 0px; font-size: 16px;">In an app development class, we were partnered up with one other teammate to create any type of mobile app whether it be a game or type of math solver tool. The partner I had at the time and I decided to build an imitation Galaga game. My partner and I had really good intentions to build a more extravagant version of the game, but my partner ended up dropping the class leaving me to finish solo. Due to this factor the game ended up being a bit more simple but the basic concept still created with some tweaks. This game was created using a drag-and-drop interface tool that was used for all students in the class.</blockquote><b>Movie Theater Website</b><blockquote style="margin-top: 0px; font-size: 16px;">This was another group project with teams of 4 to create a new concept for a movie theater website. The concept we came up with was while picking seat tickets, you were also able to view what that seat would look like as if you were physically in the theater. One of my teammates did 3D rendering of a mock-up theater to create this visuals. I contributed mostly on the frontend. This website was created using Java and JavaScript.</blockquote><b>Senior Project</b><blockquote style="margin-top: 0px; font-size: 16px;">For my senior project we were put into groups of 5 and our goal was to work with a real world client to build a prototype product based off of their needs/wants. We ended up working with a company called Kutak Rock which is a law firm in the United States with a location here in <b>Omaha, NE</b>. My contributions to this project was the client liason along with assistant with the frontend and backend development. The request from the client was a help desk ticketing system type application that allows more self-help options to users. We created a FAQ database that would allow users to start typing in their issue and would search through the database for a possible solution. The solutions would eitehr be a step by step walkthrough or possibly a button to press that would automate a fix. The last piece that we encorporated was the ticket submission screen that would automate grabbing computer information along with log files that would be bundled up and sent over email. Due to the company\'s strict security policies, all the testing was done with personal computers. The frontend was coded in TypeScript and the backend in C#.</blockquote></div>';
-    document.getElementById("schoolID1").innerHTML = schoolDescription;
-    document.getElementById("schoolID2").innerHTML = schoolDescription;
+  <script>
+    function expandSchool() {
+      var revealText = document.getElementById("schoolExpand");
+      var btnStatus = document.getElementById("schoolButton");
+      var otherBtns1 = document.getElementById("blockButton");
+      var otherBtns2 = document.getElementById("minecraftButton");
+      var otherBtns3 = document.getElementById("webButton");
+  
+      if (revealText.style.display === "inline") {
+        revealText.style.display = "none";
+        btnStatus.style.display = "inline";
+        otherBtns1.style.display = "inline";
+        otherBtns2.style.display = "inline";
+        otherBtns3.style.display = "inline";
+      } else {
+        revealText.style.display = "inline";
+        btnStatus.style.display = "none";
+        otherBtns1.style.display = "none";
+        otherBtns2.style.display = "none";
+        otherBtns3.style.display = "none";
+      }
+    }
   </script>
 
   <script>
@@ -260,7 +278,7 @@
         otherBtns2.style.display = "none";
         otherBtns3.style.display = "none";
       }
-  }
+    }
   </script>
 
 <script>
@@ -284,7 +302,7 @@
       otherBtns2.style.display = "none";
       otherBtns3.style.display = "none";
     }
-}
+  }
 </script>
 
 <script>
@@ -308,31 +326,7 @@
       otherBtns2.style.display = "none";
       otherBtns3.style.display = "none";
     }
-}
-</script>
-
-<script>
-  function expandSchool() {
-    var revealText = document.getElementById("schoolExpand");
-    var btnStatus = document.getElementById("schoolButton");
-    var otherBtns1 = document.getElementById("blockButton");
-    var otherBtns2 = document.getElementById("minecraftButton");
-    var otherBtns3 = document.getElementById("webButton");
-  
-    if (revealText.style.display === "inline") {
-      revealText.style.display = "none";
-      btnStatus.style.display = "inline";
-      otherBtns1.style.display = "inline";
-      otherBtns2.style.display = "inline";
-      otherBtns3.style.display = "inline";
-    } else {
-      revealText.style.display = "inline";
-      btnStatus.style.display = "none";
-      otherBtns1.style.display = "none";
-      otherBtns2.style.display = "none";
-      otherBtns3.style.display = "none";
-    }
-}
+  }
 </script>
 
   <footer style="text-align: center;">

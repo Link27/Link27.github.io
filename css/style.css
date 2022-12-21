@@ -73,6 +73,13 @@ section .layout {
     border-radius: 10px;
 }
 
+section .layout h1 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
 footer {
     text-align: center;
     padding: 20px;
