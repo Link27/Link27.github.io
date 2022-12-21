@@ -8,7 +8,91 @@
   <link rel="icon" href="/images/triforceicon.png">
   <link href="/css/style.css" rel="stylesheet">
   <style>
+    section .layout h1 {
+      position: relative;
+      text-align: center;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
+    .column1 {
+      float: left;
+      width: 50%;
+      padding: 5px;
+    }
+
+    .column2 {
+        float: left;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .button {
+      border: none;
+      background-color: rgb(206, 210, 214);
+      cursor: pointer;
+      width: 100%;
+      height: 75px;
+      border-radius: 8px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+    }
+
+    .button:hover {
+      background-color: rgba(206, 210, 214, 0.50);
+    }
+
+    .button h2 {
+      text-align: center;
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    input {
+        width: 100%;
+        margin: 0.2rem 0;
+        padding: 1.0rem;
+        border: 1px solid white;
+        font-size: 18px;
+        border-radius: 8px;
+        background: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    textarea {
+        width: 100%;
+        height: 200px;
+        margin: 0.2rem 0;
+        padding: 1.0rem;
+        border: 1px solid white;
+        font-size: 18px;
+        border-radius: 8px;
+        background: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ::placeholder {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    a:link {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: white;
+    }
   </style>
 </head>
 <body>
@@ -32,12 +116,42 @@
   <section>
     <div class="layout">
       <h1><img src="/images/mail.png" alt="Mail" width="18" height="18"> Contact Me <img src="/images/mail.png" alt="Mail" width="18" height="18"></h1>
-      <form action="https://formsubmit.co/el/tidani" method="POST">
-        <input type="text" name="First Name" placeholder="First Name" required>
-        <input type="text" name="Last Name" placeholder="Last Name" required>
-        <input type="email" name="Email" placeholder="Email" required>
-        <textarea name="Message" placeholder="Message" required></textarea>
-        <button type="submit">Send</button>
+
+      <a href="https://www.linkedin.com/in/james-sastamoine-2b1b62166/" target="_blank">
+        <div style="display: flex; align-items: center; float: left;">
+            &nbsp;&nbsp;<img src="/images/linkedin.png" alt="Linkedin" width="24" height="24"><h3 style="margin-top: 22px;">&nbsp;Linkedin</h3>
+        </div>
+      </a>
+      <a href="https://github.com/Link27" target="_blank">
+        <div style="display: flex; align-items: center; float: right;">
+            <h3 style="margin-top: 22px;">Github&nbsp;</h3><img src="/images/githublogo.png" alt="Github" width="24" height="24">&nbsp;&nbsp;
+        </div>
+      </a>
+      <div style="clear: both;"></div>
+      <form action="https://formspree.io/f/myyagplg" method="POST">
+        <div class="row">
+            <div class="column1">
+                <input type="text" name="First Name" placeholder="First Name" required>
+            </div>
+            <div class="column1">
+                <input type="text" name="Last Name" placeholder="Last Name" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column2">
+                <input type="email" name="Email" placeholder="Email" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column2">
+                <textarea name="Message" placeholder="Message" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column2">
+                <button class="button" style="width: 100%;" type="submit"><h2>Send</h2></button>
+            </div>
+        </div>
       </form>
     </div>
   </section>
