@@ -84,3 +84,11 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+a.hyperlinks:link {
+    color: yellow;
+  }
+
+a.hyperlinks:visited {
+    color: orange;
+}
