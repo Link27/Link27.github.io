@@ -78,6 +78,7 @@ section .layout h1 {
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
   }
 
 footer {
@@ -92,3 +93,10 @@ a.hyperlinks:link {
 a.hyperlinks:visited {
     color: orange;
 }
+
+section .layout .headerImg {
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+  }
